@@ -1,8 +1,6 @@
 h1 {{title}}
-h2 英雄列表
-ul.heroes
-  li(*ngFor='let hero of heroes',(click)='onSelect(hero)',
-    [class.selected]='hero === selectedHero')
-    span.badge() {{hero.id}}
-    | {{hero.name}}
-app-hero-detail([hero]="selectedHero")
+nav
+  a(routerLink="/dashboard") 推荐
+  | &nbsp;
+  a(routerLink="/heroes") 列表
+router-outlet
