@@ -4,4 +4,7 @@ ul.heroes
     [class.selected]='hero === selectedHero')
     span.badge() {{hero.id}}
     | {{hero.name}}
-app-hero-detail([hero]="selectedHero")
+//- app-hero-detail([hero]="selectedHero")
+div(*ngIf="selectedHero")
+  h2 {{selectedHero.name}}
+  button((click)="gotoDetail()") 查看详情
