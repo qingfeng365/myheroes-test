@@ -1,7 +1,14 @@
 
 <h2>英雄列表</h2>
+<div>
+  <label>英雄名称：</label>
+  <input #heroName=""/>
+  <button (click)="add(heroName.value); heroName.value=''">新增</button>
+</div>
 <ul class="heroes">
-  <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero"><span class="badge">{{hero.id}}</span>{{hero.name}}</li>
+  <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero"><span class="badge">{{hero.id}}</span><span>{{hero.name}}</span>&nbsp;
+    <button (click)="delete(hero); $event.stopPropagation()" class="delete">x</button>
+  </li>
 </ul>
 <div *ngIf="selectedHero">
   <h2>{{selectedHero.name}}</h2>

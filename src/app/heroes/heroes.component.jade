@@ -1,10 +1,15 @@
 h2 英雄列表
+div
+  label 英雄名称：
+  input(#heroName='')
+  button((click)="add(heroName.value); heroName.value=''") 新增
 ul.heroes
   li(*ngFor='let hero of heroes',(click)='onSelect(hero)',
     [class.selected]='hero === selectedHero')
     span.badge() {{hero.id}}
-    | {{hero.name}}
-//- app-hero-detail([hero]="selectedHero")
+    span {{hero.name}}
+    | &nbsp;
+    button.delete((click)="delete(hero); $event.stopPropagation()") x
 div(*ngIf="selectedHero")
   h2 {{selectedHero.name}}
   button((click)="gotoDetail()") 查看详情

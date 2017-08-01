@@ -23,6 +23,7 @@
     "@angular/router": "^4.0.0",
     "@types/bootstrap": "^3.3.34",
     "@types/jquery": "^3.2.5",
+    "angular-in-memory-web-api": "^0.3.2",
     "core-js": "^2.4.1",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
