@@ -13,11 +13,14 @@ import { HeroService } from '../service/hero.service';
   animations: [
     trigger('heroState', [
       state('inactive', style({
-        transform: 'scale(1)'
+        backgroundColor: '#607D8B',
+        transform: 'scale(1)',
+        color: '#eee'
       })),
       state('active', style({
         backgroundColor: '#cfd8dc',
-        transform: 'scale(1.1)'
+        transform: 'scale(1.1)',
+        color: '#607d8b'
       })),
       transition('inactive => active', animate('200ms ease-in')),
       transition('active => inactive', animate('200ms ease-out'))
@@ -37,17 +40,7 @@ export class DashboardComponent implements OnInit {
   }
 
   changeActiveHero(hero: Hero) {
-    console.log('changeActiveHero...');
-    console.log(hero);
-
     this.activeHero = hero;
-  }
-  changeInActiveHero(hero: Hero) {
-    console.log('changeInActiveHero...');
-    console.log(hero);
-    if (this.activeHero === hero) {
-      this.activeHero = null;
-    }
   }
   isActiveHero(hero: Hero): boolean {
     return this.activeHero === hero;

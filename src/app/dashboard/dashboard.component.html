@@ -1,8 +1,6 @@
 
 <h3>最强英雄</h3>
-<div class="grid grid-pad"><a *ngFor="let hero of heroes" [routerLink]="['/detail', hero.id]" (mouseenter)="changeActiveHero(hero)" (mouseleave)="changeInActiveHero(hero)" class="col-1-4">
-    <div [@heroState]="getState(hero)" class="module hero">
+<div class="grid grid-pad"><a *ngFor="let hero of heroes" [routerLink]="['/detail', hero.id]" (mouseenter)="changeActiveHero(hero)" (mouseleave)="changeActiveHero(null)" class="col-1-4">
+    <div [@heroState]="getState(hero)" class="module">
       <h4>{{hero.name}}</h4>
     </div></a></div>
-<hr/>
-<pre>{{activeHero|json}}</pre>
