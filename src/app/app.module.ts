@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, Component } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -23,6 +24,7 @@ import { InMemoryDataService } from './mock-data/in-memory-data.service';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     AppRoutingModule,
     HttpModule,

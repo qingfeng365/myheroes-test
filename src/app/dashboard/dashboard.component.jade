@@ -1,5 +1,9 @@
 h3 最强英雄
 .grid.grid-pad
-  a.col-1-4(*ngFor="let hero of heroes", [routerLink]="['/detail', hero.id]")
-    .module.hero
+  a.col-1-4(*ngFor="let hero of heroes", [routerLink]="['/detail', hero.id]",
+    (mouseenter)="changeActiveHero(hero)",
+    (mouseleave)="changeInActiveHero(hero)")
+    .module.hero([@heroState]="getState(hero)")
       h4 {{hero.name}}
+hr
+pre {{activeHero|json}}
