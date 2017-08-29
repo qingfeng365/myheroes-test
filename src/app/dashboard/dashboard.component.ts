@@ -23,7 +23,17 @@ import { HeroService } from '../service/hero.service';
         color: '#607d8b'
       })),
       transition('inactive => active', animate('200ms ease-in')),
-      transition('active => inactive', animate('200ms ease-out'))
+      transition('inactive => active', [
+        style({
+          backgroundColor: 'red',
+          transform: 'scale(1.3)'
+        }),
+        animate('500ms ease-in', style({
+          backgroundColor: 'green',
+          transform: 'scale(0.6)'
+        }))
+      ]),
+      transition('active => inactive', animate('500ms ease-out'))
     ])
   ]
 })

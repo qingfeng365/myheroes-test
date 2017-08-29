@@ -14,6 +14,7 @@ import { HttpModule } from '@angular/http';
 
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api'
 import { InMemoryDataService } from './mock-data/in-memory-data.service';
+import { AnimateHeroListComponent } from './animate-hero-list/animate-hero-list.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { InMemoryDataService } from './mock-data/in-memory-data.service';
     HeroDetailComponent,
     HeroesComponent,
     DashboardComponent,
+    AnimateHeroListComponent,
   ],
   imports: [
     BrowserModule,

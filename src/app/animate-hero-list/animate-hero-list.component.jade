@@ -1,0 +1,10 @@
+h2 英雄列表
+  span(*ngIf="_heroes.length > 0")
+    button(type="button",(click)="enter()") 进场
+    | &nbsp;
+    button(type="button",(click)="leave()") 离场
+ul
+  li(*ngFor='let hero of heroes',
+    (click)="toggleState(hero)",
+    [@heroState]="hero.state")
+    | {{hero.name}}

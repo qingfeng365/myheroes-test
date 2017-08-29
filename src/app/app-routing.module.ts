@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HeroesComponent } from './heroes/heroes.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { AnimateHeroListComponent } from './animate-hero-list/animate-hero-list.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'detail/:id',
     component: HeroDetailComponent,
+  },
+  {
+    path: 'animate-hero-list',
+    component: AnimateHeroListComponent
   }
 ];
 
