@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HeroesComponent } from './heroes/heroes.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { AnimateHeroListComponent } from './animate-hero-list/animate-hero-list.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { HeroListComponent } from './heroes/hero-list/hero-list.component';
+import { DashboardComponent } from './heroes/dashboard/dashboard.component';
+import { HeroDetailComponent } from './heroes/hero-detail/hero-detail.component';
+import { AnimateHeroListComponent } from './heroes/animate-hero-list/animate-hero-list.component';
 
 const routes: Routes = [
   {
@@ -12,20 +13,8 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'heroes',
-    component: HeroesComponent
-  },
-  {
-    path: 'dashboard',
-    component: DashboardComponent,
-  },
-  {
-    path: 'detail/:id',
-    component: HeroDetailComponent,
-  },
-  {
-    path: 'animate-hero-list',
-    component: AnimateHeroListComponent
+    path: '**',
+    component: NotFoundComponent
   }
 ];
 

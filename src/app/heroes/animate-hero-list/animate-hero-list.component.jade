@@ -6,5 +6,7 @@ h2 英雄列表
 ul
   li(*ngFor='let hero of heroes',
     (click)="toggleState(hero)",
-    [@heroState]="hero.state")
+    [@heroState]="hero.state",
+    (@heroState.start)="logit($event)",
+    (@heroState.done)="logit($event)")
     | {{hero.name}}

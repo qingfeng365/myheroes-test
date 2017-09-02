@@ -4,11 +4,11 @@ import { HeroService } from '../service/hero.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-heroes',
-  templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.css']
+  selector: 'app-hero-list',
+  templateUrl: './hero-list.component.html',
+  styleUrls: ['./hero-list.component.css']
 })
-export class HeroesComponent implements OnInit {
+export class HeroListComponent implements OnInit {
 
   heroes: Hero[] = [];
 
@@ -57,3 +57,4 @@ export class HeroesComponent implements OnInit {
       })
   }
 }
+

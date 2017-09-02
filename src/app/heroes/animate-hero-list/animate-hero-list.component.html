@@ -3,5 +3,5 @@
     <button type="button" (click)="enter()">进场</button>&nbsp;
     <button type="button" (click)="leave()">离场</button></span></h2>
 <ul>
-  <li *ngFor="let hero of heroes" (click)="toggleState(hero)" [@heroState]="hero.state">{{hero.name}}</li>
+  <li *ngFor="let hero of heroes" (click)="toggleState(hero)" [@heroState]="hero.state" (@heroState.start)="logit($event)" (@heroState.done)="logit($event)">{{hero.name}}</li>
 </ul>
