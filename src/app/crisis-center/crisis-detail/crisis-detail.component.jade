@@ -1,0 +1,11 @@
+div(*ngIf="crisis")
+  h3 {{editName}}
+  div
+    label 序号:
+    | {{crisis.id}}
+  div
+    label 名称:
+    input([(ngModel)]="editName", placeholder="请输入名称")
+  p
+    button((click)="save()") 保存
+    button((click)="cancel()") 放弃

@@ -1,0 +1,7 @@
+ul.items
+  li(*ngFor="let crisis of crises",
+    (click)="onSelect(crisis)",
+    [class.selected]="isSelected(crisis)")
+    span.badge {{ crisis.id }}
+    | {{ crisis.name }}
+router-outlet

@@ -9,6 +9,7 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api'
 import { InMemoryDataService } from './mock-data/in-memory-data.service';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HeroesModule } from './heroes/heroes.module';
+import { CrisisCenterModule } from './crisis-center/crisis-center.module';
 
 @NgModule({
   declarations: [
@@ -18,9 +19,10 @@ import { HeroesModule } from './heroes/heroes.module';
   imports: [
     BrowserModule,
     HeroesModule,
-    AppRoutingModule,
     HttpModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 1000 })
+    InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 1000 }),
+    CrisisCenterModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
