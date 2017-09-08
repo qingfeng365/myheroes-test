@@ -1,0 +1,6 @@
+
+<h2>登录</h2>
+<p>
+  <button (click)="login()" *ngIf="!authService.isLoggedIn">登录</button>&nbsp;
+  <button (click)="logout()" *ngIf="authService.isLoggedIn">登出</button>
+</p>

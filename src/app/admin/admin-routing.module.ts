@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { ManageHeroesComponent } from './manage-heroes/manage-heroes.component';
+import { AuthGuardService } from '../auth-guard.service';
 
 const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent,
+    canActivate: [AuthGuardService],
     children: [
       {
         path: 'crises',

@@ -1,3 +1,4 @@
+import { AuthGuardService } from './auth-guard.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 
@@ -11,11 +12,14 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { HeroesModule } from './heroes/heroes.module';
 import { CrisisCenterModule } from './crisis-center/crisis-center.module';
 import { AdminModule } from './admin/admin.module';
+import { LoginComponent } from './login/login.component';
+import { AuthService } from './auth.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotFoundComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +30,7 @@ import { AdminModule } from './admin/admin.module';
     AdminModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [AuthService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
