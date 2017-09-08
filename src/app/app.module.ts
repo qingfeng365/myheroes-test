@@ -10,6 +10,7 @@ import { InMemoryDataService } from './mock-data/in-memory-data.service';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HeroesModule } from './heroes/heroes.module';
 import { CrisisCenterModule } from './crisis-center/crisis-center.module';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CrisisCenterModule } from './crisis-center/crisis-center.module';
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 1000 }),
     CrisisCenterModule,
+    AdminModule,
     AppRoutingModule,
   ],
   providers: [],
