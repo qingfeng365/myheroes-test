@@ -13,18 +13,25 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
     children: [
       {
-        path: 'crises',
-        component: ManageCrisesComponent
-      },
-      {
-        path: 'heroes',
-        component: ManageHeroesComponent
-      },
-      {
         path: '',
-        component: AdminDashboardComponent
+        canActivateChild: [AuthGuardService],
+        children: [
+          {
+            path: 'crises',
+            component: ManageCrisesComponent
+          },
+          {
+            path: 'heroes',
+            component: ManageHeroesComponent
+          },
+          {
+            path: '',
+            component: AdminDashboardComponent
+          }
+        ]
       }
-    ]
+    ],
+
   }]
 
 @NgModule({
