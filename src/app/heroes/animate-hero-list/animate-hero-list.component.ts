@@ -21,8 +21,8 @@ import { Observable } from 'rxjs/Rx';
         backgroundColor: '#cfd8dc',
         transform: 'scale(1.1)',
       })),
-      transition('inactive => active', animate('100ms ease-in')),
-      transition('active => inactive', animate('100ms ease-out')),
+      transition('inactive => active', animate('2000ms ease-in')),
+      transition('active => inactive', animate('2000ms ease-out')),
       transition('void => *', [
         style({ width: 10, transform: 'translateX(50px)', opacity: 0 }),
         group([
